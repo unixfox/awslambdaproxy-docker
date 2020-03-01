@@ -9,6 +9,11 @@ services:
             AWS_SECRET_ACCESS_KEY: ""
             AWS_REGIONS: "us-west-2"
         image: unixfox/awslambdaproxy
+        ports:
+            - mode: host
+              protocol: tcp
+              published: 2222
+              target: 2222
 #secrets:
 #    AWS_ACCESS_KEY_ID
 #    AWS_SECRET_ACCESS_KEY
